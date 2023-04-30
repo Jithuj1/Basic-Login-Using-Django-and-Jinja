@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(136, 155, 171);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.header{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.mainDiv{
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sub1{
+    width: 15rem;
+    height: 7rem;
+    background-color: rgb(118, 118, 155);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: 600;
+}
+.btn1{
+    color:black;
+    text-decoration: none;
+}
+.btn1:hover{
+    color: black;
+}
+.form{
+    width: 100vw;
+    height: 100vh;
+}
+.color{
+    background-color: rgb(122, 100, 100);
+}
+.logoutbtn{
+   width: 95vw;
+   height: 10vh;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   color: black;
+}
+.singlebtn{
+    background-color: rgb(96, 96, 149);
+    color: black;
+    font-weight: 600;
+    border: none;
+    padding: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+.options{
+    width: 25vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.singleoption{
+    padding: 5px;
+    font-size: larger;
+    font-weight: 600;
+}

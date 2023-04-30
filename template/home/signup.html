@@ -1,0 +1,106 @@
+{% load static %}
+
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="header" style="margin-top: 2rem; margin-bottom: 2rem;">Signup page</h1>
+
+    <div class="form" >
+        <section class="vh-80 gradient-custom">
+            <div class="container h-80 ">
+              <div class="row justify-content-center align-items-center h-90">
+                <div class="col-12 col-lg-9 col-xl-7">
+                  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                      <form method = "POST">
+                        {% csrf_token %}
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+          
+                            <div class="form-outline">
+                              <input type="text" name="name" id="firstName" class="form-control form-control-lg" />
+                              <label class="form-label" for="firstName">Name</label>
+                            </div>
+          
+                          </div>
+                          <div class="col-md-6 mb-4">
+          
+                            <div class="form-outline">
+                              <input type="text" name="phone" id="lastName" class="form-control form-control-lg" />
+                              <label class="form-label" for="lastName">Phone</label>
+                            </div>
+          
+                          </div>
+                        </div>
+          
+                        <div class="row">
+                          <div class="col-md-6 mb-4 d-flex align-items-center">
+          
+                            <div class="form-outline datepicker w-100">
+                              <input type="text" name="country" class="form-control form-control-lg" id="birthdayDate" />
+                              <label for="birthdayDate" class="form-label">Country</label>
+                            </div>
+          
+                          </div>
+                          <div class="col-md-6 mb-4">
+          
+                            <div class="col-12">
+          
+                                <select class="select form-control-lg" name="role">
+                                  <option value="1" disabled>Choose option</option>
+                                  <option value="student">Student</option>
+                                  <option value="teacher">Teacher</option>
+                                  <option value="staff">Staff</option>
+                                </select>
+                                <label class="form-label select-label">Select One</label>
+              
+                              </div>
+          
+                          </div>
+                        </div>
+          
+                        <div class="row">
+                          <div class="col-md-6 mb-4 pb-2">
+          
+                            <div class="form-outline">
+                              <input type="email" name="email" id="emailAddress" class="form-control form-control-lg" />
+                              <label class="form-label" for="emailAddress">Email</label>
+                            </div>
+          
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2">
+          
+                            <div class="form-outline">
+                              <input type="tel" id="phoneNumber" name="password" class="form-control form-control-lg" />
+                              <label class="form-label" for="phoneNumber">Password</label>
+                            </div>
+          
+                          </div>
+                        </div>
+          
+                        <div class="mt-2 mb-2 text-danger">{{message}}</div>
+                        <div class="mt-2 ">
+                          <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                        </div>
+          
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </div>
+</body>
+</html>

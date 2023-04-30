@@ -1,0 +1,27 @@
+{% load static %}
+
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="header">Staff Home </h1>
+    <div class="logoutbtn"><button class="singlebtn"><a class="btn1" href="{% url 'staff_out' %}">Logout</a></button></div>
+    <div class="options">
+        <div class="singleoption">Admission</div>
+        <div class="singleoption">Courses</div>
+        <div class="singleoption">Salary</div>
+        <div class="singleoption">Scholarship</div>
+        <div class="singleoption">Results</div>
+    </div>
+</body>
+</html>
